@@ -1,0 +1,25 @@
+
+Your Gold: <input type="text" value="<%= session[:gold] %>">
+
+
+<form action="/farms" method="post">
+    	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    	<h3>Farm</h3>
+		<p>(earns 10-20 golds)</p>
+    	<input type='submit' value='Find Gold!'>
+</form>
+
+
+<form action="/casinos" method="post">
+    	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    	<h3>Casino</h3>
+		<p>(earns/takes 0-50 golds)</p>
+    	<input type='submit' value='Find Gold!'>
+</form>
+
+<p>Activites:</p>
+<textarea rows="15" cols="50">
+	<% session[:record].each do |record| %> 
+		<p><%= record %></p>
+	<% end %>
+</textarea>

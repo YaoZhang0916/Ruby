@@ -1,0 +1,26 @@
+<h2>List <%= @count %> Dojos</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Coding Dojo Branch</th>
+			<th>Street</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<% @dojo.each do |dojo| %>
+		<tr>
+			<td><%= dojo.branch %></td>
+			<td><%= dojo.street %></td>
+			<td><%= dojo.city %></td>
+			<td><%= dojo.state %></td>
+			<td><a href="dojos/<%= dojo.id %>">show</a> <a href="dojos/<%= dojo.id %>/students">Student</a></td>
+		</tr>
+		<% end %>
+	</tbody>	
+</table>
+
+<a href="/dojos/new">New Dojo</a>

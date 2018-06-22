@@ -1,0 +1,15 @@
+
+<form action="/posts" method="post" accept-charset="utf-8">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+You Nmae: <input type="text" name="name"><br>
+Dojo Location: <select name="location" >
+	               <option value="dallas">Dallas</option>
+	               <option value="New York">New York</option>
+	               <option value="LA">LA</option>
+		        </select><br>
+Commnet (optional):<br>
+<textarea name="comment" rows="10" cols="30">
+	
+</textarea>
+<input type="submit" value='Submit'>
+</form>

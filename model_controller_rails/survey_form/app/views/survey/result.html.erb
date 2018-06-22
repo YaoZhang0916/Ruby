@@ -1,0 +1,15 @@
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+<p>Thank for submitting this form! You have submmited this form 
+<%= session[:time] %>times now</p>
+
+<h2>Submitted Information</h2>
+<p>Name: <%= session[:Name] %></p>
+<p>Location: <%= session[:Location] %></p>
+<p>Commnet: <%= session[:Commnet] %></p>
+
+<a href='/' >Go Back</a>
